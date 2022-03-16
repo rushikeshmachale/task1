@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <script src="index.js"></script>
+</head>
+<style>
+    input{
+        margin: 10px;
+        padding: 6px;
+        width: 60%;
+        border-radius: 6px;
+    }
+    button{
+        padding: 4px 20px;
+        border-radius: 4px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div>
+        <a href="/html/myweb/college/index.html"><button>Back</button></a>
+        <div id="std"></div>
+    </div>
+    <center class="main">
+        <h2>College Admission Form</h2>
+        <form action="POST"></form>
+        <div> <input type="text" name="" id="name" placeholder="Enter your name"></div>
+        <div> <input type="email" name="" id="email" placeholder="Enter your email"></div>
+        <div> <input type="number" name="" id="number" placeholder="Enter your Roll number"></div>
+        <div><input type="number" name="" id="phone" placeholder="Enter your Mobile number" ></div>
+        <div> <input type="password" name="" id="pass" placeholder="Create your password"></div>
+        <div> <input type="password" name="" id="cpass" placeholder="Confirm your password"></div>
+        <div><button onclick="submit()">Submit</button></div>
+    </center>
+
+    <script>
+        function submit(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let rollno=document.getElementById("number").value;
+            let phone=document.getElementById("phone").value;
+            let pass=document.getElementById("pass").value;
+            let cpass=document.getElementById("cpass").value;
+           document.getElementById("std").innerHTML="acount successufully created"
+               document.getElementById("std").style.display="inline"
+            // })
+           if(name ==""||email ==""||rollno ==""||phone ==""||pass ==""||cpass ==""){
+               document.getElementById("std").style.display="none"
+               alert("please fill the all form")
+           }
+        }
+    </script>
+</body>
+
+</html>
